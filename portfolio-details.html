@@ -41,20 +41,18 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">首页</a></li>
-          <li><a href="index.html#portfolio">任务</a></li>
-          <li><a href="index.html#services">服务</a></li>
-          <li><a href="index.html#about">关于</a></li>
-          <li><a href="index.html#contact">联系</a></li>
+          <li><a href="index.html#hero" class="active" data-i18n="home">首页</a></li>
+          <li><a href="index.html#portfolio" data-i18n="task">任务</a></li>
+          <li><a href="index.html#services" data-i18n="services">服务</a></li>
+          <li><a href="index.html#about" data-i18n="about">关于</a></li>
+          <li><a href="index.html#contact" data-i18n="contact">联系</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="#" id="zh-btn">中文版</a> ｜ <a href="#" id="en-btn">English</a>
+
       </div>
 
     </div>
@@ -65,9 +63,8 @@
     <!-- Page Title -->
     <div class="page-title dark-background" data-aos="fade">
       <div class="container position-relative">
-        <h1>现在就来用做任务的方式购买便宜好货吧</h1>
-        <p>我们致力于通过丰富的任务来让大家领取后可以获得便宜好用的新品的机会</p>
-      
+        <h1 data-i18n="ad">现在就来用做任务的方式购买便宜好货吧</h1>
+        <p data-i18n="adtext">我们致力于通过丰富的任务来让大家领取后可以获得便宜好用的新品的机会</p>
       </div>
     </div><!-- End Page Title -->
 
@@ -122,19 +119,19 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>商品信息</h3> 
+              <h3 data-i18n="goods">商品信息</h3> 
               <ul>
-                <li><strong>名称</strong>: N°5 限量創作 EAU DE PARFUM</li>
-                <li><strong>原价</strong>: $150</li>
-                <li><strong>完成任务后价格</strong>: $100</li>
-                <li><strong>任务状态</strong>: 
+                <li><strong data-i18n="name">名称</strong>: N°5  EAU DE PARFUM</li>
+                <li><strong data-i18n="price">原价</strong>: $150</li>
+                <li><strong data-i18n="vipprice">完成任务后价格</strong>: $100</li>
+                <li><strong data-i18n="taskstatus">任务状态</strong>: 
                     <script>
                       if(sessionStorage.getItem('video') == '1'){
                         document.write(
-                          `<span class="badge text-bg-success">已完成</span>`
+                          `<span class="badge text-bg-success" data-i18n="done">已完成</span>`
                         );
                       }else{
-                        document.write(`<span class="badge text-bg-danger">未完成</span>`);
+                        document.write(`<span class="badge text-bg-danger" data-i18n="todo">未完成</span>`);
                       }
                     </script>
                   </span>
@@ -143,13 +140,13 @@
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <p>
+              <p data-i18n="pdesc">
                 N°5 Eau de Parfum 以 Parfum 的传奇配方为灵感，拥有相同乙醛花香的特质。
 这款围绕繁花香气由五月玫瑰和茉莉调配而成，前调是明亮的柑橘，乙醛赋予香水截然不同的存在感，一抹丝滑的香草气息留下无可比拟的感性余韵。
               </p>
-              <h2>观看一段视频完成任务</h2>
-              <a href="https://www.youtube.com/watch?v=brY54cxFxPw" class="btn btn-primary glightbox">马上观看视频</a>
-              <a href="cart.html" class="btn btn-success">加入购物车</a>
+              <h2 data-i18n="watch">观看一段视频完成任务</h2>
+              <a href="https://www.youtube.com/watch?v=brY54cxFxPw" class="btn btn-primary glightbox" data-i18n="watchnow">马上观看视频</a>
+              <a href="cart.html" class="btn btn-success" data-i18n="addcart">加入购物车</a>
             </div>
           </div>
 
@@ -167,10 +164,10 @@
       <div class="container">
         <div class="row justify-content-center text-center">
           <div class="col-lg-6">
-            <h4>加入我们的订阅</h4>
-            <p>订阅我们的新闻通讯，获取最新的任务和产品信息！</p>
+            <h4 data-i18n="sub">加入我们的订阅</h4>
+            <p data-i18n="subp">订阅我们的新闻通讯，获取最新的任务和产品信息！</p>
             <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="订阅"></div>
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Submit"></div>
               <div class="loading">Loading</div>
               <div class="error-message"></div>
               <div class="sent-message">您的订阅请求已发送。谢谢！</div>
@@ -195,27 +192,27 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>导航</h4>
+          <h4 data-i18n="nav">导航</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">首页</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#portfolio">任务</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#services">服务</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#about">关于</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#" data-i18n="home">首页</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#portfolio" data-i18n="task">任务</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services" data-i18n="services">服务</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about" data-i18n="about">关于</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>服务</h4>
+          <h4 data-i18n="services">服务</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">售后服务</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">配送服务</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">交流社区</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">会员任务</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#" data-i18n="saleservice">售后服务</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#" data-i18n="deliveyservice">配送服务</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#" data-i18n="bbs">交流社区</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#" data-i18n="viptask">会员任务</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12">
-          <h4>关注我们</h4>
+          <h4 data-i18n="follow">关注我们</h4>
           <p></p>
           <div class="social-links d-flex">
             <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -252,7 +249,171 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  
+  <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.3/i18next.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.1/i18nextHttpBackend.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"></script>
+
+  <script>
+    // 初始化i18next
+    i18next
+        .use(i18nextHttpBackend)
+        .use(i18nextBrowserLanguageDetector)
+        .init({
+            fallbackLng: 'zh',
+            debug: true,
+            resources: {
+                en: {
+                    translation: {
+                        home: "Home",
+                        task: "Task",
+                        about: "About",
+                        contact: "Contact",
+                        services: "Services",
+                        all: "All",
+                        beauty: "Beauty",
+                        digital: "Digital",
+                        brand: "Brand",
+                        other: "Other",
+                        ad: "Come and buy quality goods at a low price by completing tasks now!",
+                        adtext: "We are committed to providing everyone with opportunities to receive affordable and useful new products through a variety of tasks.",
+                        register: "Register to receive tasks",
+                        receivetask: "Claim Task",
+                        tasktext: "Claim tasks now to get quality products at low prices.",
+                        completingprice: "Price after completion: ",
+                        liquid: "Foundation Set",
+                        camera: "Digital Camera Kit",
+                        pomegranate: "Pomegranate Cream Gift Set",
+                        perfume: "Chanel Perfume",
+                        bbcream: "BB Cream Concealer",
+                        lotion: "Moisturizing Essence Lotion",
+                        swiss: "Swiss Army Knife Backpack Luggage",
+                        suger: "Gummy Candy Set",
+                        light: "Wall Lamp",
+                        sweep: "Robot Vacuum Cleaner",
+                        fussy: "Fussy Natural Deodorant",
+                        newproducts: "New Products",
+                        newproductsdesc: "All products offered on our platform are brand new and unused. Customers can purchase with confidence, ensuring they receive the latest and highest quality product experience.",
+                        viptask: "Exclusive Member Tasks",
+                        viptaskdesc: "Only registered members can claim and complete tasks to earn points. The member-exclusive task system ensures priority participation in new product trials.",
+                        active: "Priority Participation in New Events",
+                        activedesc: "Members will receive immediate notifications about new product launches and limited-time events, ensuring they don't miss any new products or redemption opportunities.",
+                        bbs: "Community Forum",
+                        bbsdesc: "Join our member community where users can share their opinions and experiences with new products, as well as exchange tips on completing tasks.",
+                        saleservice: "After-Sales Service",
+                        saleservicedesc: "We promise to provide a 7-day no-reason return service. If you are not satisfied with a product, you can apply for a return within 7 days of receiving it without providing any reason. We will make the return process as simple as possible, allowing you to shop worry-free!",
+                        deliveyservice: "Delivery Service",
+                        deliveyservicedesc: "We guarantee fast and reliable delivery services. We partner with various logistics companies to offer you multiple delivery options to meet different needs.",
+                        more: "Learn More",
+                        aboutdesc: "Folome is an innovative platform dedicated to providing high-quality products to users. Our official website offers a registration feature, allowing users to complete various tasks to gain access to low-priced quality products. We believe that through diverse task setups, users can easily receive practical and cost-effective new products in their daily lives.",
+                        follow: "Follow Us",
+                        nav: "Navigation",
+                        faq: "FAQ",
+                        sub: "Subscription",
+                        subp: "Subscribe to our newsletter for the latest task and product information!",
+                        address: "Address",
+                        tel: "Phone",
+                        submit: "Submit",
+                        goods: "Product Information",
+                        name: "Name",
+                        price: "Original Price",
+                        vipprice: "Price After Completing Tasks",
+                        taskstatus: "Task Status",
+                        pdesc: "N°5 Eau de Parfum is inspired by the legendary formula of Parfum, possessing the same aldehydic floral characteristics. This fragrance is crafted around a floral aroma of May rose and jasmine, with bright citrus notes in the top. Aldehyde gives the perfume a distinctly different presence, leaving an incomparable sensual afterglow with a touch of silky vanilla.",
+                        watch: "Watch a Video to Complete the Task",
+                        watchnow: "Watch the Video Now",
+                        addcart: "Add to Cart",
+                        done: "Completed",
+                        todo: "Incomplete"
+                    }
+                },
+                zh: {
+                    translation: {
+                        home: "首页",
+                        task: "任务",
+                        about: "关于",
+                        contact: "联系",
+                        services: "服务",
+                        all: "所有",
+                        beauty: "美妆",
+                        digital: "数码",
+                        brand: "品牌",
+                        other: "其他",
+                        ad: "现在就来用做任务的方式购买便宜好货吧",
+                        adtext: "我们致力于通过丰富的任务来让大家领取后可以获得便宜好用的新品的机会",
+                        register: "注册领取任务",
+                        receivetask: "领取任务",
+                        tasktext: "现在就来领取任务，获取低价优质商品",
+                        completingprice: "完成后价格",
+                        liquid: "粉底液套装",
+                        camera: "数码相机套装",
+                        pomegranate: "红石榴日霜晚霜套盒两件套",
+                        perfume: "Chanel 香水",
+                        bbcream: "遮瑕bb霜",
+                        lotion: "滋润精华乳液",
+                        swiss: "瑞士军刀背包行李箱",
+                        suger: "软糖一套",
+                        light: "壁灯",
+                        sweep: "扫地机器人",
+                        fussy: "Fussy 天然除臭剂",
+                        newproducts: "全新商品",
+                        newproductsdesc: "我们平台提供的商品均为全新、未使用的产品，用户可以放心购买，确保获得最新和最优质的商品体验。",
+                        viptask: "会员任务",
+                        viptaskdesc: "只有注册成为我们的会员，用户才能领取和完成任务来获取积分。会员专享的任务机制确保了优先参与新商品试用的机会。",
+                        active: "优先参与新活动",
+                        activedesc: "会员将第一时间获得关于新产品发布和限时活动的通知，确保不错过任何全新的产品和兑换机会。",
+                        bbs: "交流社区",
+                        bbsdesc: "加入我们的会员社区，用户可以与其他会员分享对新品的看法和使用体验，交流任务完成技巧。",
+                        saleservice: "售后服务",
+                        saleservicedesc: "我们承诺提供7天无理由退货服务。您可以在收到商品后的7天内，若对商品不满意，无需提供任何理由，便可申请退货。我们将全力简化退货流程，让您购物无忧！",
+                        deliveyservice: "配送服务",
+                        deliveyservicedesc: "我们承诺为您提供快速、可靠的配送服务。我们与多家物流公司合作，为您提供多种配送方式，以满足不同需求。",
+                        more: "了解更多",
+                        aboutdesc: "Folome是一家致力于为用户提供高品质商品的创新平台。我们的官方网站为用户提供注册功能，用户可以通过完成各种任务来获取低价优质商品的机会。我们坚信，通过丰富多样的任务设置，能够让用户在日常生活中轻松领取到划算且实用的新产品。",              
+                        follow: "关注我们",
+                        nav: "导航",
+                        faq: "常见问题",
+                        sub: "加入我们的订阅",
+                        subp: "订阅我们的新闻通讯，获取最新的任务和产品信息！",
+                        address: "地址",
+                        tel: "电话",
+                        submit: "提交",
+                        goods: "商品信息",
+                        name: "名称",
+                        price: "原价",
+                        vipprice: "完成任务后价格",
+                        taskstatus: "任务状态",
+                        pdesc: "N°5 Eau de Parfum 以 Parfum 的传奇配方为灵感，拥有相同乙醛花香的特质。这款围绕繁花香气由五月玫瑰和茉莉调配而成，前调是明亮的柑橘，乙醛赋予香水截然不同的存在感，一抹丝滑的香草气息留下无可比拟的感性余韵。",
+                        watch: "观看一段视频完成任务",
+                        watchnow: "马上观看视频",
+                        addcart: "加入购物车",
+                        done: "已完成",
+                        todo: "未完成"
+                  
+
+                    }
+                },
+            }
+        }, function(err, t) {
+            jqueryI18next.init(i18next, $);
+            $('body').localize();
+        });
+
+    // 语言切换
+    $('#en-btn').click(function() {
+        i18next.changeLanguage('en', function() {
+            $('body').localize();
+        });
+    });
+    
+    $('#zh-btn').click(function() {
+        i18next.changeLanguage('zh', function() {
+            $('body').localize();
+        });
+    });
+    
+</script>
 
 </body>
 
