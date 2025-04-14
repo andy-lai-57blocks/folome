@@ -126,7 +126,7 @@
                 <li><strong data-i18n="vipprice">完成任务后价格</strong>: $100</li>
                 <li><strong data-i18n="taskstatus">任务状态</strong>: 
                     <script>
-                      if(sessionStorage.getItem('video') == '1'){
+                      if(sessionStorage.getItem('rewarded') == 'true'){
                         document.write(
                           `<span class="badge text-bg-success" data-i18n="done">已完成</span>`
                         );
@@ -145,8 +145,8 @@
 这款围绕繁花香气由五月玫瑰和茉莉调配而成，前调是明亮的柑橘，乙醛赋予香水截然不同的存在感，一抹丝滑的香草气息留下无可比拟的感性余韵。
               </p>
               <h2 data-i18n="watch">观看一段视频完成任务</h2>
-              <a href="https://www.youtube.com/watch?v=brY54cxFxPw" class="btn btn-primary glightbox" data-i18n="watchnow">马上观看视频</a>
-              <a href="cart.html" class="btn btn-success" data-i18n="addcart">加入购物车</a>
+              <a href="ad.html" class="btn btn-primary glightbox" data-i18n="watchnow">马上观看视频</a>
+              <a href="cart.html" class="btn btn-success" data-i18n="addcart" id="add_to_cart" style="display: none;">加入购物车</a>
             </div>
           </div>
 
@@ -413,6 +413,17 @@
         });
     });
     
+    // 检查是否完成任务，显示或隐藏加入购物车按钮
+    document.addEventListener('DOMContentLoaded', function() {
+        const addToCartBtn = document.getElementById('add_to_cart');
+        
+        // 当rewarded为true时显示按钮
+        if (sessionStorage.getItem('rewarded') === 'true') {
+            addToCartBtn.style.display = 'inline-block';
+        } else {
+            addToCartBtn.style.display = 'none';
+        }
+    });
 </script>
 
 </body>
