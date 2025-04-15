@@ -1802,3 +1802,25 @@ section,
 .payment-logo {
   max-width: 100px;
 }
+
+/* Special Price Styling */
+.special_price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #e74c3c;
+  background-color: #f9f9f9;
+  padding: 2px 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Original Price Styling */
+.original_price {
+  font-size: 1.1em;
+  text-decoration: line-through;
+  color: #7f8c8d;
+  background-color: #f9f9f9;
+  padding: 2px 8px;
+  border-radius: 4px;
+  position: relative;
+}
