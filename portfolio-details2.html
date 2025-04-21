@@ -26,18 +26,11 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <script>
-    function checkout() {
-        location.href = 'https://www.paypal.com/';
-    }
-    function shop() {
-        location.href = 'index.html';
-    }
-</script>
+
 
 </head>
 
-<body class="starter-page-page">
+<body class="portfolio-details-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
@@ -75,94 +68,92 @@
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Starter Section Section -->
-    <section id="starter-section" class="starter-section section">
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 data-i18n="bag">购物袋</h2>
-        <p></p>
-      </div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <!-- 商品列表 -->
-          <div class="col-md-12">
-              <div class="list-group">
-                  <div class="list-group-item">
-                      <div class="row">
-                          <div class="col-md-3">
-                              <img src="assets/img/portfolio/p1.jpg" alt="商品1" class="img-fluid">
-                          </div>
-                          <div class="col-md-7">
-                              <h5>T3 headphones</h5>
-                              <p data-i18n="pdesc">Sudio T3 无线耳机佩戴舒适，并配备迷你便携充电盒，方便用户在运动时轻松携带。这款充电盒可将播放时间延长至 25 小时，并搭载最新的蓝牙 5.4 技术，实现更稳定的连接。</p>
-                              <p><span data-i18n="price">价格</span>: <span class="special_price">$5</span></p>
-                          </div>
-                          <div class="col-md-2 text-right">
-                              <button class="btn btn-danger" data-i18n="del">删除</button>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="list-group-item">
-                      <div class="row">
-                          <div class="col-md-3">
-                              <img src="assets/img/portfolio/t1.jpg" alt="商品2" class="img-fluid">
-                          </div>
-                          <div class="col-md-7">
-                              <h5> Apple Watch SE</h5>
-                              <p data-i18n="pdesc2">轻松保持联系。激励健身指标。创新的健康与安全功能。清新的表带颜色。Apple Watch SE 功能丰富，价格亲民。</p>
-                              <p><span data-i18n="price">价格</span>: <span class="special_price">$150</span></p>
-                          </div>
-                          <div class="col-md-2 text-right">
-                              <button class="btn btn-danger" data-i18n="del">删除</button>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- 可以添加更多商品 -->
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/product-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/t1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/t2.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/t3.jpg" alt="">
+                </div>
+
               </div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
 
-          <!-- 订单信息部分 -->
-        <div class="col-md-12 mt-4 order-summary">
-          <h5 data-i18n="order">订单信息</h5>
-          <div class="d-flex justify-content-between">
-              <span data-i18n="subtotal">小计:</span>
-              <span>$155</span>
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3 data-i18n="goods">商品信息</h3> 
+              <ul>
+                <li><strong data-i18n="name">名称</strong>: Apple Watch SE</li>
+                <li><strong data-i18n="price">原价</strong>: <span class="original_price">$257.50</span></li>
+                <li><strong data-i18n="vipprice">完成任务后价格</strong>: <span class="special_price">$150</span></li>
+                <li><strong data-i18n="taskstatus">任务状态</strong>: 
+                    <script>
+                      if(sessionStorage.getItem('rewarded2') == 'true'){
+                        document.write(
+                          `<span class="badge text-bg-success" data-i18n="done">已完成</span>`
+                        );
+                      }else{
+                        document.write(`<span class="badge text-bg-danger" data-i18n="todo">未完成</span>`);
+                      }
+                    </script>
+                  </span>
+                
+                </li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <p data-i18n="pdesc">
+                轻松保持联系。激励健身指标。创新的健康与安全功能。清新的表带颜色。Apple Watch SE 功能丰富，价格亲民。
+              </p>
+              <h2 data-i18n="watch">观看视频并下载完成任务</h2>
+              <a href="ad2.html" class="btn btn-primary glightbox" data-i18n="watchnow">马上观看视频</a>
+              <a href="cart.html" class="btn btn-success" data-i18n="addcart" id="add_to_cart" style="display: none;">加入购物车</a>
+            </div>
           </div>
-          <div class="d-flex justify-content-between">
-              <span data-i18n="delfee">运费:</span>
-              <span data-i18n="free">免费</span>
-          </div>
-          <div class="d-flex justify-content-between">
-              <strong data-i18n="total">总计:</strong>
-              <strong>$155</strong>
-          </div>
-      </div>
-  
-          <div class="col-md-12 mt-4">
-              <div class="d-flex justify-content-between">
-                  <button class="btn btn-primary" onclick="checkout()" data-i18n="checkout">继续结账</button>
-                  <button class="btn btn-secondary" onclick="shop()" data-i18n="shopping">继续购物</button>
-              </div>
-          </div>
-      </div>
-  
-      <hr>
-  
-      <h5 data-i18n="payment">支付方式</h5>
-      <div class="d-flex flex-wrap justify-content-around mt-3">
-          <img src="assets/img/pay/paypal.png" alt="PayPal" class="payment-logo">
-          <img src="assets/img/pay/visa.png" alt="Visa" class="payment-logo">
-          <img src="assets/img/pay/wsd.png" alt="MasterCard" class="payment-logo">
-          <img src="assets/img/pay/yinlian.png" alt="American Express" class="payment-logo">
-          <img src="assets/img/pay/bank.png" alt="MasterCard" class="payment-logo">
-          <img src="assets/img/pay/alipay.png" alt="American Express" class="payment-logo">
-          <!-- 添加更多支付方式图标 -->
-      </div>
+
+        </div>
+
       </div>
 
-    </section><!-- /Starter Section Section -->
+    </section><!-- /Portfolio Details Section -->
 
   </main>
 
@@ -257,7 +248,6 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-
   <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.3/i18next.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.3.1/i18nextHttpBackend.min.js"></script>
@@ -326,26 +316,15 @@
                         submit: "Submit",
                         goods: "Product Information",
                         name: "Name",
-                        price: "Price",
+                        price: "Original Price",
                         vipprice: "Price After Completing Tasks",
                         taskstatus: "Task Status",
-                        pdesc: "The Sudio T3 wireless earbuds snugly fit in the ears and come with a portable mini charging case, allowing users to easily carry them during any movement. This charging case extends the playback time to 25 hours, equipped with the latest Bluetooth 5.4 technology for a more stable connection.",
-                        watch: "Watch a Video to Complete the Task",
+                        pdesc: "Easy ways to stay connected. Motivating fitness metrics. Innovative health and safety features. Fresh band colors. Apple Watch SE is packed with features at a feel-good price.",
+                        watch: "Download to Complete the Task",
                         watchnow: "Watch the Video Now",
                         addcart: "Add to Cart",
                         done: "Completed",
-                        todo: "Incomplete",
-                        del: "Delete",
-                        pdesc2: "Easy ways to stay connected. Motivating fitness metrics. Innovative health and safety features. Fresh band colors. Apple Watch SE is packed with features at a feel-good price.",
-                        order: "Order Information",
-                        subtotal: "Subtotal",
-                        delfee: "Shipping Fee",
-                        free: "Free",
-                        total: "Total",
-                        checkout: "Checkout",
-                        shopping: "Continue Shopping",
-                        payment: "Payment Method",
-                        bag: "Shopping Bag"
+                        todo: "Incomplete"
                     }
                 },
                 zh: {
@@ -401,26 +380,17 @@
                         submit: "提交",
                         goods: "商品信息",
                         name: "名称",
-                        price: "价格",
+                        price: "原价",
                         vipprice: "完成任务后价格",
                         taskstatus: "任务状态",
-                        pdesc: "Sudio T3 无线耳机佩戴舒适，并配备迷你便携充电盒，方便用户在运动时轻松携带。这款充电盒可将播放时间延长至 25 小时，并搭载最新的蓝牙 5.4 技术，实现更稳定的连接。",
-                        watch: "观看一段视频完成任务",
+                        pdesc: "轻松保持联系。激励健身指标。创新的健康与安全功能。清新的表带颜色。Apple Watch SE 功能丰富，价格亲民。",
+                        watch: "观看视频并下载完成任务",
                         watchnow: "马上观看视频",
                         addcart: "加入购物车",
                         done: "已完成",
-                        todo: "未完成",
-                        del: "删除",
-                        pdesc2: "轻松保持联系。激励健身指标。创新的健康与安全功能。清新的表带颜色。Apple Watch SE 功能丰富，价格亲民。",
-                        order: "订单信息",
-                        subtotal: "小计",
-                        delfee: "运费",
-                        free: "免费",
-                        total: "总计",
-                        checkout: "继续结账",
-                        shopping: "继续购物",
-                        payment: "支付方式",
-                        bag: "购物袋"
+                        todo: "未完成"
+                  
+
                     }
                 },
             }
@@ -442,8 +412,24 @@
         });
     });
     
+    // 检查是否完成任务，显示或隐藏加入购物车按钮
+    document.addEventListener('DOMContentLoaded', function() {
+        const addToCartBtn = document.getElementById('add_to_cart');
+        
+        // 当rewarded为true时显示按钮
+        if (sessionStorage.getItem('rewarded') === 'true') {
+            addToCartBtn.style.display = 'inline-block';
+        } else {
+            addToCartBtn.style.display = 'none';
+        }
+    });
 </script>
 
+<style>
+    .gslide-external {
+        background-color: #000;
+    }
+</style>
 </body>
 
 </html>
